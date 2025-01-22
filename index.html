@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Llama</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fira-code/6.2.0/fira_code.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="new-chat">
+                <button id="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+            </div>
+            <div class="chat-history">
+                <!-- Chat history items will be added here -->
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="chat-container">
+                <div id="messages" class="messages">
+                    <!-- Welcome message -->
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Hello! I'm Llama, an AI assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="input-box" 
+                            rows="1" 
+                            placeholder="Message Llama..."
+                            autofocus
+                        ></textarea>
+                        <button id="send-button" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <p>Llama may produce inaccurate information. Consider checking important information.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
